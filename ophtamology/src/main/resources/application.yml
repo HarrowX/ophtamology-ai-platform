@@ -4,7 +4,18 @@ server:
 spring:
   application:
     name: ophtamology
-
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ophtamology-ai-platform
+    driver-class-name: org.postgresql.Driver
+    username: postgres_user
+    password: postgres_password
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
 management:
   endpoints:
     web:
